@@ -8,7 +8,7 @@ RUN go mod init rabbitmq-hello-world
 
 RUN go get github.com/streadway/amqp
 
-COPY consumer.go /src
+COPY reciever/consumer.go /src
 
 RUN go build consumer.go
 
