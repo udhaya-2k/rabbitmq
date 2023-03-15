@@ -9,7 +9,7 @@ ENV GO111MODULE=on
 
 RUN go mod init rabbitmq-hello-world
 
-COPY publisher.go /src
+COPY sender/publisher.go /src
 
 RUN go get github.com/gofiber/fiber/v2
 RUN go get github.com/streadway/amqp
