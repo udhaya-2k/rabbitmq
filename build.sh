@@ -16,9 +16,4 @@ sudo docker build -f reciever/Dockerfile .
 
 # Start the publisher/sender to push the messages to the rabbitmq server
 
-cd sender && go run publisher.go
-
-cd ../
-# Start the consumer/reciever to pull the message to the rabbitmq server
-
-# cd reciever && go run reciever/consumer.go
+gnome-terminal -- sh -c "cd sender && go run publisher.go" && gnome-terminal -- sh -c "cd reciever && go run consumer.go"
